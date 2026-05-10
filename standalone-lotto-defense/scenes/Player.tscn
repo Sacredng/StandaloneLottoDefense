@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dbjn8g1wok2pp"]
+
+[ext_resource type="Texture2D" uid="uid://sncpg67jg4vd" path="res://graphics/general assets/circle.png" id="1_rpqav"]
+
+[node name="Player" type="Node2D" unique_id=104606780]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=174996212]
+position = Vector2(3.8146973e-06, 3.8146973e-06)
+scale = Vector2(0.15625001, 0.15625001)
+texture = ExtResource("1_rpqav")
