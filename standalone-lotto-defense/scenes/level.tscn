@@ -2,7 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://dbjn8g1wok2pp" path="res://scenes/player.tscn" id="1_tumq0"]
 
+[sub_resource type="Curve2D" id="Curve2D_2q6dc"]
+
 [node name="Level" type="Node2D" unique_id=424731645]
 
 [node name="Player" parent="." unique_id=104606780 instance=ExtResource("1_tumq0")]
 position = Vector2(576, 311)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=563366717]
+curve = SubResource("Curve2D_2q6dc")
