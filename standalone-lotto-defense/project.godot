@@ -15,6 +15,11 @@ run/main_scene="uid://c2acfjjd212t"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[global_group]
+
+EnemiesGroup=""
+TowersGroup=""
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

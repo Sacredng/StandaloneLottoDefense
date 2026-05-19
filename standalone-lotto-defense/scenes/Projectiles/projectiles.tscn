@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://havr6ln8cmai"]
+[gd_scene format=3 uid="uid://ci8smf43uvgia"]
 
-[node name="Node2D" type="Node2D" unique_id=1074003746]
+[ext_resource type="Texture2D" uid="uid://sncpg67jg4vd" path="res://assets/sprites/circle.png" id="1_b1ryr"]
+[ext_resource type="Script" path="res://scripts/projectiles.gd" id="1_mlxh1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b1ryr"]
+radius = 11.0
+
+[node name="BasicProjectile" type="Area2D" unique_id=1757961881]
+script = ExtResource("1_mlxh1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=305333001]
+modulate = Color(0.14509805, 1, 0, 1)
+position = Vector2(-3.8146973e-06, 9.536743e-07)
+scale = Vector2(0.01833333, 0.01833333)
+texture = ExtResource("1_b1ryr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=562902266]
+shape = SubResource("CircleShape2D_b1ryr")
