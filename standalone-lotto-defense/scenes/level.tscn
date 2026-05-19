@@ -1,12 +1,30 @@
 [gd_scene format=3 uid="uid://c2acfjjd212t"]
 
-[ext_resource type="PackedScene" uid="uid://dbjn8g1wok2pp" path="res://scenes/Player/player.tscn" id="1_tumq0"]
-[ext_resource type="PackedScene" uid="uid://cvppoayj8vucs" path="res://scenes/enemies/BasicEnemy.tscn" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://dbjn8g1wok2pp" path="res://scenes/Player/player.tscn" id="1_k5jlv"]
+[ext_resource type="PackedScene" uid="uid://cvppoayj8vucs" path="res://scenes/enemies/BasicEnemy.tscn" id="2_6vs76"]
+[ext_resource type="Script" uid="uid://b7ayx1mrct061" path="res://scenes/path_follow_2d.gd" id="2_kl8ac"]
+
+[sub_resource type="Curve2D" id="Curve2D_kl8ac"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -69.25588, 57.257175, 0, 0, 0, 0, 545.8813, 57.257233, 0, 0, 0, 0, 1162.2725, 57.692932, 0, 0, 0, 0, 1168.4037, 560.5916, 0, 0, 0, 0, -80.840904, 560.5916, 0, 0, 0, 0, -75.603966, 57.910812)
+}
+point_count = 6
 
 [node name="Level" type="Node2D" unique_id=424731645]
 
-[node name="Player" parent="." unique_id=104606780 instance=ExtResource("1_tumq0")]
+[node name="Player" parent="." unique_id=104606780 instance=ExtResource("1_k5jlv")]
 position = Vector2(576, 311)
 
-[node name="CharacterBody2D" parent="." unique_id=1586910666 instance=ExtResource("2_w7c3h")]
-position = Vector2(96, 96)
+[node name="Path2D" type="Path2D" parent="." unique_id=302389416]
+position = Vector2(127.811935, 40.966026)
+scale = Vector2(0.8140919, 0.94370663)
+curve = SubResource("Curve2D_kl8ac")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1598338059]
+position = Vector2(-69.25588, 57.257175)
+rotates = false
+script = ExtResource("2_kl8ac")
+
+[node name="BasicEnemy" parent="Path2D/PathFollow2D" unique_id=1586910666 instance=ExtResource("2_6vs76")]
+position = Vector2(7.6623535, 4.2709904)
+rotation = -0.00035383407
