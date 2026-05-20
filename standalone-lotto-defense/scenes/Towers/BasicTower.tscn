@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://cjmel4uylrpjb"]
 
-[ext_resource type="Script" uid="uid://bdhm1mn2s31ca" path="res://scripts/TowersScripts/BasicTowerScript.gd" id="1_xvgg7"]
+[ext_resource type="Script" uid="uid://bdhm1mn2s31ca" path="res://Scripts/TowersScripts/BasicTowerScript.gd" id="1_xvgg7"]
+[ext_resource type="PackedScene" uid="uid://ci8smf43uvgia" path="res://scenes/Projectiles/projectiles.tscn" id="2_2tpgm"]
 [ext_resource type="Texture2D" uid="uid://cvl1a6w1qm71e" path="res://icon.svg" id="2_k2bua"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sqa50"]
-radius = 19.026299
+radius = 18.47
 
 [node name="BasicTower" type="Node2D" unique_id=736489875]
 script = ExtResource("1_xvgg7")
+projectile_scene = ExtResource("2_2tpgm")
 
 [node name="BasicTowerSprite" type="Sprite2D" parent="." unique_id=216653189]
 scale = Vector2(0.296875, 0.296875)
@@ -19,6 +21,7 @@ texture = ExtResource("2_k2bua")
 shape = SubResource("CircleShape2D_sqa50")
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=1626236018]
+wait_time = 0.5
 autostart = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ci8smf43uvgia"]
 
 [ext_resource type="Texture2D" uid="uid://sncpg67jg4vd" path="res://assets/sprites/circle.png" id="1_b1ryr"]
-[ext_resource type="Script" path="res://scripts/projectiles.gd" id="1_mlxh1"]
+[ext_resource type="Script" uid="uid://byvahg8mnvfso" path="res://scripts/Projectiles/projectiles.gd" id="1_mlxh1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b1ryr"]
 radius = 11.0
@@ -11,6 +11,7 @@ script = ExtResource("1_mlxh1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=305333001]
 modulate = Color(0.14509805, 1, 0, 1)
+self_modulate = Color(2.341346, 18.892157, 1.5645489, 0.95686275)
 position = Vector2(-3.8146973e-06, 9.536743e-07)
 scale = Vector2(0.01833333, 0.01833333)
 texture = ExtResource("1_b1ryr")

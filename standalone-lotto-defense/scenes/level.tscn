@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c2acfjjd212t"]
 
 [ext_resource type="PackedScene" uid="uid://dbjn8g1wok2pp" path="res://scenes/Player/player.tscn" id="1_k5jlv"]
+[ext_resource type="Script" uid="uid://bdamjpc06lsg5" path="res://scripts/Managers/GameManager.gd" id="1_qifjx"]
 [ext_resource type="PackedScene" uid="uid://cvppoayj8vucs" path="res://scenes/enemies/BasicEnemy.tscn" id="2_6vs76"]
 [ext_resource type="Script" uid="uid://b7ayx1mrct061" path="res://Scripts/EnemiesScripts/path_follow_2d.gd" id="2_kl8ac"]
 [ext_resource type="PackedScene" uid="uid://cjmel4uylrpjb" path="res://scenes/Towers/BasicTower.tscn" id="4_kl8ac"]
@@ -12,6 +13,7 @@ _data = {
 point_count = 6
 
 [node name="Level" type="Node2D" unique_id=424731645]
+script = ExtResource("1_qifjx")
 
 [node name="Player" parent="." unique_id=104606780 instance=ExtResource("1_k5jlv")]
 position = Vector2(576, 311)
@@ -27,8 +29,6 @@ rotates = false
 script = ExtResource("2_kl8ac")
 
 [node name="BasicEnemy" parent="Path2D/PathFollow2D" unique_id=1586910666 instance=ExtResource("2_6vs76")]
-position = Vector2(7.6623535, 4.270996)
-rotation = -0.00035383407
 
 [node name="BasicTower" parent="." unique_id=736489875 instance=ExtResource("4_kl8ac")]
-position = Vector2(345, 133)
+position = Vector2(578, 132)
